@@ -1,0 +1,203 @@
+%%% LaTeX Template: Two column article
+%%% Feel free to distribute this template.
+%%% Date: May 2022
+%%% College Project : Project Artemis
+
+%%% Preamble
+\documentclass[	DIV=calc,%
+							paper=a4,%
+							fontsize=12pt,%
+							twocolumn]{scrartcl}
+							% KOMA-article class
+
+\usepackage{lipsum}	
+\usepackage{fontspec} 
+
+\usepackage[english]{babel}										    % English language/hyphenation
+\usepackage[protrusion=true,expansion=true]{microtype}			    % Better typography
+\usepackage{amsmath,amsfonts,amsthm}					            % Math packages
+\usepackage[pdftex]{graphicx}									    % Enable pdflatex
+\usepackage[svgnames]{xcolor}									    % Enabling colors by their 'svgnames'
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption}	% Custom captions under/above floats
+\usepackage{epstopdf}												% Converts .eps to .pdf
+\usepackage{subfig}													% Subfigures
+\usepackage{booktabs}												% Nicer tables
+\usepackage{fix-cm}													% Custom fontsizes
+
+
+
+%%% Custom sectioning (sectsty package)
+\usepackage{sectsty}												% Custom sectioning (see below)
+\allsectionsfont{%													% Change font of al section commands
+	\usefont{OT1}{phv}{b}{n}%										% bch-b-n: CharterBT-Bold font
+	}
+
+\sectionfont{%														% Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%									    % bch-b-n: CharterBT-Bold font
+	}
+
+
+
+%%% Headers and footers
+\usepackage{fancyhdr}												% Needed to define custom headers/footers
+	\pagestyle{fancy}												% Enabling the custom headers/footers
+\usepackage{lastpage}	
+
+% Header (empty)
+\lhead{}
+\chead{}
+\rhead{}
+% Footer (you may change this to your own needs)
+\lfoot{\footnotesize \texttt{SHIELD} \textbullet ~Susmit Dutta}
+\cfoot{}
+\rfoot{\footnotesize page \thepage\ of \pageref{LastPage}}	% "Page 1 of 2"
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+%%% Creating an initial of the very first character of the content
+\usepackage{lettrine}
+\newcommand{\initial}[1]{%
+     \lettrine[lines=3,lhang=0.3,nindent=0em]{
+     				\color{DarkGoldenrod}
+     				{\textsf{#1}}}{}}
+
+
+
+%%% Title, author and date metadata
+\usepackage{titling}															% For custom titles
+
+\newcommand{\HorRule}{\color{DarkGoldenrod}%			% Creating a horizontal rule
+									  	\rule{\linewidth}{1pt}%
+										}
+%%begin novalidate
+\pretitle{\vspace{-30pt} \begin{flushleft} \HorRule 
+				\fontsize{50}{50} \usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont 
+				}
+\title{ SHIELD}					% Title of your article goes here
+\posttitle{\par\end{flushleft}\vskip 0.5em}
+
+\preauthor{\begin{flushleft}
+					\large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{DarkRed}}
+\author{Susmit Dutta, }											% Author name goes here
+\postauthor{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{Black} 
+					Calcutta Institute of Engineering and Management\\
+					Department of Information Technology\\
+					West Bengal , Kolkata
+					% Institution of author
+					\par\end{flushleft}\HorRule}
+%%end novalidate
+\date{\today}																				% No date
+
+
+
+%%% Begin document
+\begin{document}
+\setmainfont{Times New Roman}
+\maketitle
+\thispagestyle{fancy} 			% Enabling the custom headers/footers for the first page 
+% The first character should be within \initial{}
+\initial{T}\textbf{he safety of women is a rising concern of increasing urgency in India and other countries. The primary issue in the handling of these cases by the police lies in constraints preventing them from responding quickly to calls of distress.To aid in the removal of these constraints we would like to introduce SHIELD an android based panic app which will help in the making the streets safer for women.}
+%%%% Brief about what the project is%%%%%
+
+%%%% Abstract is a brief describing the Project%%%%%%
+\section*{Abstract}
+\initial{A}\textbf{s} we know the usage of smart phones have increased rapidly from 3\% to more than 20\%in the past five years. And all smartphones have GPS built into them.So, a smart phone can be used efficiently for personal safety or various other protection purposes especially for women. This app can be turned on by a shortcut key pressed three times in quick succession which will not only launch the app but also send a Emergency Message to the police and some emergency contacts of the user's choice. Moreover the app would show a detailed heat map of the user's city to show the number of panic reports in an area so that the user would know to avoid that part of the city.The app would also send the users last known location to the some the user's loved ones if the user would want to do so. Another feature of the app would be to send a tracking request at the user's request to one or more of their Emergency Contacts to track the user as they are passing through a unsafe place marked on the app's map.In the future we hope the app will also work as a key feature in the reporting of crime as the police would know immediately where the is being taken place and respond almost immediately.Through this app we not only want to ensure the safety of women in our streets but want to make sure that the crimes against them don not go unpunished . This is done by addressing the circumstances that put women in danger while on the road in today's day and age.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Previous Works}
+\initial{T}\textbf{he} previous works done on the subject have been some what successful, some more so than others.So we have decided to do our research based on the most used and the most popular apps currently available to our society. We decided to follow some of the most best available apps list by some of the popular Newspapers or online Articles. Studying the lists we have concluded that the most used apps in our country area as listed below:-
+\begin{itemize}
+	\item{\textbf{\textit{ 112 India}}} 
+	\item{\textbf{\textit{ My Safetipin}}}
+	\item{\textbf{\textit{ Punjab Police Women Safety App}}}
+	\item{\textbf{\textit{bSafe}}}
+	\item{\textbf{\textit{Smart 24×7}}}
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Survey on Previous Works}
+\initial{T}\textbf{he My Safetipin} app is a phenomenal app in it's own right but our team during research have found some problems in their app. The app is mainly focused on giving a safety score to places in a city which will be shown via their app . The user can then choose to the safest route available to them.Moreover the parameters they have mentioned, which they use to measure the safety score  of a place does is not enough to accurately score a place .The parameters mentioned on their website are
+
+\textbf{\textit{Lighting}} – Availability of enough light to see all around you
+
+\textbf{\textit{Openness}} – Ability to see and move in all directions
+
+\textbf{\textit{Visibility}} – Vendors, shops, building entrances, windows and balconies from where you can be seen
+
+\textbf{\textit{People}} – Number of people around you
+
+\textbf{\textit{Security}} – Presence of police or security guards
+
+\textbf{\textit{Walk Path}} – Either a pavement or road with space to walk
+
+\textbf{\textit{Public Transport}} – Availability of public transport like metro, buses, autos, rickshaws
+
+\textbf{\textit{Gender Usage}} – Presence of women and children near you
+
+\textbf{\textit{Feeling}} – How safe do you feel
+
+The main thing we feel is missing from this app is the ability to notify if some mishap does happen to the user,they have no way to notify the police or anyone for that matter . Moreover we feel that only showing a safe route through a place is not enough to keep people safe on the streets .They also have no way to tell if any user is lying in their Feelings parameter.
+\vspace{8mm}
+\newline\initial{T}\textbf{he 112} app is a Government all in one public safety app. This app is a very good user friendly app that helps all of its user in a variety of different ways .The has one button feature for all the integrated safety organizations in the Country like Police(100) , the Fire Department(101),Ambulance(108). The user will have all the options in the app itself and a single press of the button will let the user to call which ever organization they want.We feel that the problem with this app lies in its execution . The app is designed a  public safety or better yet a reporting app for any user facing any problem on the road . The problem with the app we think is it in it's now way of weeding out prank reports or any consequence of pranksters what so ever . Moreover their is no shortcut button feature to contact the police as the may not have time to open the app during and emergency .The app at its best in used inc case of passive emergencies. It is most useful when someone else is reporting for someone else . The app being a government app it does have a certain level of trust among the users none the less based on the reviews on Google Play store and Apple Store .
+\vspace{8mm}
+\newline\initial{T}\textbf{he Punjab Police Women Safety App} is yet another effort by the Punjab Police to ensure women safety on the streets.This is an extremely easy to use app and all of the above information and widgets are available in Urdu text as well. For those who want to communicate in Urdu, can easily do so using an Urdu keyboard on their android phones. As this is an app developed by Punjab Police, you can be sure that none of your information will be leaked or misused in any way. Moreover, as the back-end is manned by female representatives, it is another reason why more women will be able to use it easily. The app has many of the similar features and we think many of the drawbacks of the other apps on this list. The app after login has many features like calling the police and other safety organizations but the lack of shortcut button will surely be a problem if someone is serious danger.Although the app does have live chat feature which has users chat with women police officers so that users can talk freely about the nature of their problem. This feature is a great one .The main problem with this app we think is that the app itself has no security features i.e that anyone can steal the mobile phone from the victim and just everything is fine . If that happens the live chat becomes useless as the security representative will have no way of knowing who it is they are talking to. The app also has no way of knowing a prank call from a real one .The Women Safety app although a great effort from the Punjab police lacks a little something that would keep women safe on the streets.
+\vspace{8mm}
+\newline\initial{T}\textbf{he bSafe app} is not an Indian app  but is available for download India through 
+the Google Play-Store .The app has many great features for the safety for the Safety of women on the streets.The app has many great features but it is a paid app . The app charges 1\$ for a single SOS alert you are sending while in danger .The mode of the app has nothing and everything the app offers is behind a pay wall. While we can understand that companies need to make profit from their apps but that app should at least have some basic features present in the free version.The reviews for this app says it all .It's sad that an app with such great features is not being used to it's full potential because of a pay wall that stops users from using it. The app has video recording and audio recording feature that saves that data on the users phone and not on a cloud service which is a huge problem.When the alarm button is pressed there will be a voiced notification that a alert has been sent which creates an obvious security issues.A lot of personal and sensitive information such as name, email, phone number, and contacts phone numbers is collected by this app and there is nothing in the policy that explains how long they hold onto this data or any of the recordings gathered from using the app. It might also include locations, information about emergencies, incidents, and contact details of your friends, family and guardians.When a contact is added into the app, they are immediately sent a notification asking them to accept the terms and be added. Features cannot be used until invites have been accepted. The invite includes a link and each person invited needs to download the app and create an account.This creates a problem as many ma not want to download an app for this and this can be done the app as well.When tested, most of the individuals who received the invite didn't realize they were required to do anything and they did not accept the invite. Others clicked the link and accepted the invite, downloaded the app, but did not continue to create the account. Once you request to have that person added to your social safety network, if they accept you will be notified. It is important to know that once the user adds a contact to their network, even if the contact has not downloaded the app, they will be notified via SMS that there is an emergency. A link is also sent that shares the location of the user and states, “I triggered my b Safe alarm and need help! Please get in touch.”
+\vspace{8mm}
+\newline\initial{T}\textbf{he 24×7 app} is an another one in a sea of other apps trying to do the same thing as the other ones and mostly doing a good job with some kinks here and there.The best thing about this app is the 24 x 7 . The app is very generic in it's use and can only do some basic things.The app has panic button that the user will set along with a the emergency contacts the user wants.The panic button will send an SOS message to all the emergency contacts but no to the police . You have and option to contact the police but by pressing a different button it is not with the SOS alert. This we think defeats the entire purpose of the app.The app also starts to record pictures and video as soon as the panic button is pressed and will send it to the emergency contacts but not to cloud. This is a problem as the video and pictures which can be essentially evidence of a crime may be lost or deleted by the user or the emergency contacts.The app although very good in it's job lacks some of the features we feel would have made it a better one.
+
+\section*{Proposed Solution}
+\initial{T}\textbf{here} are solutions to the problems we have talked about.We believe that our app will have features that will be the solution.So here we will list the features our app will have and future features that we will be adding to make the app better in every way possible.
+\begin{description}
+	\item[1.]\textbf{\textit{Panic Button}} :-  The Panic Button in the app will send  an SOS alert to the Police and the Emergency Contacts set by the user. Also a map will open up in the app and mark directions for the nearest police station.Moreover if the danger is taken care of by the user they can mark themselves safe with a 4 digit password which they will choose. No one can be marked safe unless they have the password to do so.
+	\item[2.]\textbf{\textit{Heat Map}} :- The Heat Map is feature which would show areas of the map which are unsafe based on the number of panic reports in the area . Moreover the areas will have a safety score based on the scores given by other users on the app.
+	\item[3.]\textbf{\textit{Tracking Request}} :- This feature will allow the user to send a tracking request to their emergency contacts which would show their live location to the Emergency Contact as they are passing through a unsafe location . This can be sent to multiple Emergency Contacts at once.
+	\item[4.]\textbf{\textit{Volunteer System}}:- Some users can apply for the Volunteer . Volunteers will act as extra layer of safety . Then SOS alert sent by the user in danger will not only be sent to the Police and Emergency Contacts but also to the Volunteers if the user chooses to do so.
+	The Volunteers if close to the danger can respond must faster than the police or any one else can. To apply to be Volunteer a person will have to provide their Home Address , Phone Number and a Government approved Identity proof.
+	\item[5.]\textbf{\textit{Login Details}}:- The users would need to provide some information about themselves while registering for this app.The main thing that they would need to provide is a Government approved identification.this will help against fake panic and prank reports.
+\end{description}
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Features We Want to Add in The Future}
+\initial{T}\textbf{here} are features that we will not be able to add in the app right away. Some features will be coming later and we like to present a list of what the future of the app will look like
+|\begin{description}
+    \item[1.]\textbf{\textit{Anonymous Crime Reporting}}:- Users can report crime anonymously through this app.
+    \item[2.]\textbf{\textit{Video and Pictures Recording}}:- As soon as the panic button is pressed the app will start recording Video and taking Pictures and will save them to a cloud based storage space .
+    \item[3.]\textbf{\textit{Video live Stream to Emergency Contacts}}:- When the panic button is pressed the app will start to live stream Video and Sound to the Emergency Contacts. 
+\end{description}
+These are only some of the future features more will be added as development of App progresses.
+
+\section*{Future Impact of the App}
+\initial{A}\textbf{s} far as India is concerned, use of technology for aiding women’s security is important. Today, apps might not play a vital role in security, but its constant use and regular updates as per the need and awareness about security will help the apps see good days in the future.
+\newline
+\newline
+Regretfully, women’s safety has become one of the most critical issues of this time. It is one of the important, undeniable concepts and strategies for any civilized society for centuries now. Rejecting fundamental rights to safety, freedom to follow whatever they want, personal decisions, these are not new issues. But, unfortunately, these are some of the issues that have been plaguing our society for a very long time .Thankfully, with the advancement in science and technology, we are glad that the idea of women’s safety apps has been developed in the market to make sure that women remain safe outside their homes.
+\newline
+\newline
+Through this app we would like to do our part to ensure the safety of women all around our Country. 
+\newpage
+\section*{References}
+\begin{description}
+    \item[1.] https://safetipin.com/
+    \item[2.] https://play.google.com/store/apps/details?id=com.safetipin.mysafetipin\&hl=en\_IN\&gl=US\&showAll
+              Reviews=true
+    \item[3.] https://play.google.com/store/apps/details?id=in.cdac.ners.psa.mobile.android.national\&hl=en\_IN\&gl=US
+    \item[4.] https://economictimes.indiatimes.com/magazines/panache/112-india-app-review-one-stop-shop-with-an-easy-interface-to-help-people-in-distress/articleshow/75351237.cms
+    \item[5.] https://www.zhl.org.in/blog/ziqitza-all-you-need-to-know-about-112-integrated-emergency-helpline-number/
+    \item[6.] https://112.gov.in/
+    \item[7.] https://www.zameen.com/blog/women-safety-app-punjab-police.htm
+    \item[8.] https://play.google.com/store/apps/details?id=com.psca.ppic3.womensafety\&hl=en\_IN\&gl=US
+    \item[9.] https://www.getbsafe.com/
+    \item[10.] https://www.techsafety.org/bsafe
+    \item[11.] https://play.google.com/store/apps/details?id=com.bipper.app.bsafe\&hl=en\_IN\&gl=US
+    \item[12.] https://smart24x7.com/
+    \item[13.] https://gadgetstouse.com/blog/2013/08/14/mobile-panic-button/
+\end{description}
+
+\end{document}
